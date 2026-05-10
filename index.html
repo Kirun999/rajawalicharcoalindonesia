@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rajawali Charcoal Company</title>
+  <meta name="description" content="Rajawali Charcoal Company - Premium charcoal production and briquette molding machines.">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<script>
+const toggle = document.getElementById("menu-toggle");
+const nav = document.querySelector(".nav-links");
+
+toggle.addEventListener("click", () => {
+  nav.classList.toggle("active");
+});
+window.addEventListener("scroll", () => {
+  const scrollTop = document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrolled = (scrollTop / height) * 100;
+  document.getElementById("progress-bar").style.width = scrolled + "%";
+});
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav-links a");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 100;
+    if (scrollY >= sectionTop) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === "#" + current) {
+      link.classList.add("active");
+    }
+  });
+});
+<script>
+const topBtn = document.getElementById("topBtn");
+
+window.onscroll = () => {
+  topBtn.style.display = window.scrollY > 300 ? "block" : "none";
+};
+
+topBtn.onclick = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
+</script>
+<div id="progress-bar"></div>
+<button id="topBtn">↑</button>
+<div id="loader">Loading...</div>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <div class="container nav-container">
+      <div class="logo"><div class="logo">
+  <img src="assets/images/logo.png"> Rajawali<span>Charcoal</span>
+</div></div>
+<div class="menu-toggle" id="menu-toggle">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#vision-mission">Vision</a></li>
+        <li><a href="#board">Board</a></li>
+        <li><a href="product.html">Machine</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="#contact" class="btn btn-primary">Order Now</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Global Quality, Sustainable Energy <span>Charcoal Production</span></h1>
+        <p>Your trusted partner for high-quality charcoal products and state-of-the-art briquette molding machinery. We engineer success, from raw materials to final output.</p>
+        <div class="hero-actions">
+          <a href="#about" class="btn btn-outline">Discover More</a>
+          <a href="product.html" class="btn btn-primary">View Machinery</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <div class="about-content">
+  <div class="about-text">
+    <h3>About Our Company</h3>
+    <p>
+Our commitment resides in manufacturing superior charcoal briquettes while simultaneously developing cutting-edge molding technology that empowers other businesses to succeed in the charcoal industry.
+    </p>
+  </div>
+
+  <!-- LOGO (kanan) -->
+  <div class="about-logo">
+    <img src="assets/images/rajawali_jargon.jpeg" alt="Rajawali Logo">
+  </div>
+
+</div>
+        <div class="about-text">
+          <h2 class="section-title" style="text-align: left; margin-bottom: 2rem;">Company <span>Brief Profile</span></h2>
+          <p>Our company, established in Bekasi in 2026, operates in the field of manufacturing automatic charcoal briquette machines. It was founded with the vision of transforming low-value agricultural waste—particularly rice husk and conventional charcoal—into high-value products that are more practical, eco-friendly, and marketable. By focusing on innovation and automation, the company aims to support sustainable energy solutions, empower local communities, and create new business opportunities. Although still in its early stages, the company is committed to driving efficiency in briquette production and contributing to both economic growth and environmental sustainability.</p>
+        </div>
+        <div class="about-image" style="background-color: var(--color-surface-2); height: 400px; border-radius: 8px; border: 1px solid var(--color-border); display: flex; align-items: center; justify-content: center;">
+            <h3 style="color: var(--color-text-muted); font-weight: 400;">Excellence in Production</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vision & Mission -->
+  <section id="vision-mission" class="vision-mission">
+    <div class="container">
+      <h2 class="section-title">Vision & <span>Missions</span></h2>
+      <div class="vm-grid">
+        <div class="card">
+          <h3>Our Vision</h3>
+          <p>To be the global leader in sustainable charcoal production and innovative briquette molding machinery, setting the gold standard for quality and efficiency.</p>
+        </div>
+        <div class="card">
+          <h3>Our Missions</h3>
+          <ul>
+            <li>To become a company providing sustainable energy solutions by producing high-quality briquettes that are environmentally friendly, globally competitive, and provide added value to customers, business partners, and the community through innovation, quality, and responsible use of natural resources.</li>
+            <li>To design and fabricate robust, high-performance molding machines for businesses of all scales.</li>
+            <li>To continuously innovate our processes through R&D and strict quality control.</li>
+            <li>To foster long-term partnerships through exceptional service and mechanical reliability.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Board of Directors -->
+  <section id="board">
+    <div class="container">
+      <h2 class="section-title">Board of <span>Directors</span></h2>
+      <div class="board-grid">
+        
+        <div class="member-card">
+          <div class="member-avatar">
+           <img src="assets/images/wayaw.jpeg">
+            </div>
+          <h4>Rhaka Wahyu Pratama</h4>
+          <p class="member-role">Chief Executive Officer (CEO)</p>
+          <ul>
+            <li>Leads company vision, strategy, and expansion</li>
+            <li>Oversees operations and business development</li>
+            <li>Drives innovation in briquette molding machine manufacturing</li>
+            <li>Focused on scaling Rajawali Charcoal nationally and internationally</li>
+            <li>CP : +62 896-4843-1695
+          </ul>
+        </div>
+
+        <div class="member-card">
+          <div class="member-avatar">
+           <img src="assets/images/bang_daus1.jpeg">
+            </div>
+          <h4>Muhammad Firdaus Septiawan</h4>
+          <p class="member-role">Designer, Project Engineer</p>
+          <ul>
+            <li>Responsible for machine design and product development</li>
+            <li>Develops technical drawings and structural concepts</li>
+            <li>Ensures efficiency, durability, and manufacturability</li>
+            <li>Supports continuous product improvement</li>
+            <li>CP : +62 823-3834-1259
+          </ul>
+        </div>
+
+        <div class="member-card">
+          <div class="member-avatar">
+            <img src="assets/images/kirun.jpeg">
+        </div>
+          <h4>Khairun Ilham</h4>
+          <p class="member-role">Fabricator</p>
+          <ul>
+            <li>Oversees mechanical assembly and fabrication</li>
+            <li>Ensures technical performance and machine reliability</li>
+            <li>Supports production optimization and troubleshooting</li>
+            <li>CP : +62 813-8834-9038 
+          </ul>
+        </div>
+
+        <div class="member-card">
+          <div class="member-avatar">
+           <img src="assets/images/aji_ganteng.jpeg">
+            </div>
+          <h4>Risky Aji Kusumo</h4>
+          <p class="member-role">Electrician</p>
+          <ul>
+            <li>Handles electrical systems and control panels</li>
+            <li>Ensures machine automation and safety standards</li>
+            <li>Conducts installation and electrical testing</li>
+            <li>CP : +62 838-9308-0039
+          </ul>
+        </div>
+
+        <div class="member-card">
+          <div class="member-avatar"></div>
+          <h4>Abdul Hakim Halim Naga Bonur</h4>
+          <p class="member-role">PPIC</p>
+          <ul>
+            <li>Manages production scheduling and workflow</li>
+            <li>Controls raw material inventory</li>
+            <li>Ensures timely manufacturing and delivery</li>
+            <li>CP : +62 878-8282-4224
+          </ul>
+        </div>
+
+        <div class="member-card">
+          <div class="member-avatar">
+           <img src="assets/images/firman.jpeg">
+            </div>
+          <h4>Firmansyah</h4>
+          <p class="member-role">QC, Research & Development</p>
+          <ul>
+            <li>Leads product innovation and machine improvement</li>
+            <li>Conducts testing and quality assurance</li>
+            <li>Ensures product performance and reliability</li>
+            <li>CP : +62 887-0772-9449
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Order -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2 class="section-title">Ready to <span>Elevate</span> Your Production?</h2>
+      <p style="max-width: 600px; margin: 0 auto 2rem; color: var(--color-text-muted);">Reach out to us to inquire about our premium charcoal briquettes or request a custom quote for our advanced molding machines.</p>
+      
+      <div style="margin-bottom: 3rem;">
+        <a href="mailto:info@rajawalicharcoal.com" class="btn btn-primary" style="font-size: 1.2rem; padding: 1rem 3rem;">Request a Quote</a>
+      </div>
+
+      <div class="contact-info">
+        <div class="contact-item">
+          <h4>Email Us</h4>
+          <p>info@rajawalicharcoal.com</p>
+        </div>
+        <div class="contact-item">
+          <h4>Call Us</h4>
+          <p> 021 - 2121 3434</p>
+        </div> 
+        <div class="contact-item">
+          <h4>Location</h4>
+          <p>Jl. Mawar No. 123, Industrial Area </p>
+          <p>Cikarang Utara, Bekasi 17530, Indonesia
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Rajawali Charcoal Company. All rights reserved.</p>
+    </div>
+  </footer>
+<script>
+const faders = document.querySelectorAll(".fade-in, .about-text, .about-logo");
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+});
+
+faders.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
